@@ -1,0 +1,7 @@
+C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Release\RonSwansonEmailTest.exe.config
+C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Release\RonSwansonEmailTest.exe
+C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Release\RonSwansonEmailTest.pdb
+C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\obj\Release\RonSwansonEmailTest.exe
+C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\obj\Release\RonSwansonEmailTest.pdb
+C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Release\CommandLine.dll
+C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Release\CommandLine.xml
