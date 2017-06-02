@@ -1,5 +1,0 @@
-C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Debug\RonSwansonEmailTest.exe.config
-C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Debug\RonSwansonEmailTest.exe
-C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Debug\RonSwansonEmailTest.pdb
-C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\obj\Debug\RonSwansonEmailTest.exe
-C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\obj\Debug\RonSwansonEmailTest.pdb
