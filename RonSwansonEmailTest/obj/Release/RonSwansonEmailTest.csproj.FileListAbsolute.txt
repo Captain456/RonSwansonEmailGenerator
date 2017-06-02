@@ -5,3 +5,4 @@ C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmai
 C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\obj\Release\RonSwansonEmailTest.pdb
 C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Release\CommandLine.dll
 C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\bin\Release\CommandLine.xml
+C:\Source\Test C# Code\Ron Swanson Email Test\RonSwansonEmailTest\RonSwansonEmailTest\obj\Release\RonSwansonEmailTest.csprojResolveAssemblyReference.cache
