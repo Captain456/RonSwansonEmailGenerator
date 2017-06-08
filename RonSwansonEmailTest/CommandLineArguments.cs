@@ -13,7 +13,7 @@ namespace RonSwansonEmailTest
     using CommandLine.Text;
 
     /// <summary>
-    ///
+    /// Represents the command line arguments to parse for the application.
     /// </summary>
     public class CommandLineArguments
     {
