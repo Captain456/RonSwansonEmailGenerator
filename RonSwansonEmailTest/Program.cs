@@ -63,9 +63,9 @@ namespace RonSwansonEmailTest
 
                 // Get the quote
                 RonSwansonRestApiClient ronSwansonRestApiClient = new RonSwansonRestApiClient();
+                var ronSwansonQuote = ronSwansonRestApiClient.GetResponse();
 
                 // Format the quote
-                var ronSwansonQuote = ronSwansonRestApiClient.GetResponse();
                 ronSwansonQuote = ronSwansonQuote.Substring(1);
                 ronSwansonQuote = ronSwansonQuote.Remove(ronSwansonQuote.Length - 1) + " - Ron Swanson";
 
