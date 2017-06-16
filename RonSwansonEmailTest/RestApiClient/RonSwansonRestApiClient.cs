@@ -20,8 +20,14 @@ namespace RonSwansonEmailTest.RestApiClient
     {
         #region Fields
 
+        /// <summary>
+        /// The URL for the API.
+        /// </summary>
         private string url;
 
+        /// <summary>
+        /// Parameters for the URL.
+        /// </summary>
         private string urlParameters;
 
         #endregion
