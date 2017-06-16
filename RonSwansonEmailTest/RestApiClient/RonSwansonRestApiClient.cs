@@ -51,7 +51,7 @@ namespace RonSwansonEmailTest.RestApiClient
         // No properties are defined
         #endregion
 
-        #region <Public Methods>
+        #region Public Methods
 
         /// <summary>
         /// Requests a response from the Ron Swanson Quote API
