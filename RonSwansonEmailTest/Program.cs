@@ -133,15 +133,6 @@ namespace RonSwansonEmailTest
                 if (!Parser.Default.ParseArguments(arguments, commandLineArguments))
                 {
                     Console.WriteLine($"[{DateTime.Now}] ERROR: Failed to parse command line arguments");
-
-                    var options = typeof(CommandLineArguments)
-                        .GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                        .Select(property => new
-                        {
-                            Property = property,
-                            Attribute = property.GetCustomAttribute<BaseOptionAttribute>()
-                        })
-                        .Where(pair => pair.Attribute != null);
                 }
             }
             catch (Exception exception)
