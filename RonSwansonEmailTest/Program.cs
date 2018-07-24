@@ -12,6 +12,7 @@ namespace RonSwansonEmailTest
     using System;
     using System.IO;
     using System.Linq;
+    using System.Net.Mail;
     using System.Reflection;
     using CommandLine;
     using RonSwansonEmailTest.FileStringParser;
@@ -60,6 +61,7 @@ namespace RonSwansonEmailTest
                 var receiversFilePath = commandLineArguments.ReceiversFilePath;
                 var ccReceiversFilePath = commandLineArguments.CCReceiversFilePath;
                 var additionalMessage = commandLineArguments.Message;
+                var imageFilePath = commandLineArguments.imageFilePath;
 
                 // Get the quote
                 RonSwansonRestApiClient ronSwansonRestApiClient = new RonSwansonRestApiClient();
@@ -72,6 +74,17 @@ namespace RonSwansonEmailTest
                 if (additionalMessage != null)
                 {
                     ronSwansonQuote = ronSwansonQuote + "\n\n" + additionalMessage;
+                }
+
+                LinkedResource inlineImage = null;
+
+                // Add an inline image
+                if (imageFilePath != null)
+                {
+                    inlineImage = new LinkedResource(imageFilePath);
+                    inlineImage.ContentId = Guid.NewGuid().ToString();
+
+                    ronSwansonQuote = "<p>" + ronSwansonQuote + "</p>\n\n" + "<img src=\"cid:" + inlineImage.ContentId + "\">";
                 }
 
                 // Setup email notification
@@ -97,7 +110,8 @@ namespace RonSwansonEmailTest
                                                                             subject: subject,
                                                                             senderAddress: senderAddress,
                                                                             receiverAddresses: fileEmailAddressParser.ParseFile(receiversFilePath).ToArray(),
-                                                                            carbonCopyReceiverAddresses: fileEmailAddressParser.ParseFile(ccReceiversFilePath).ToArray());
+                                                                            carbonCopyReceiverAddresses: fileEmailAddressParser.ParseFile(ccReceiversFilePath).ToArray(),
+                                                                            linkedResource: inlineImage);
 
                 // Send the email notification
                 Console.WriteLine($"Sending email with the following message:\n{ronSwansonQuote}");

@@ -49,6 +49,11 @@ namespace RonSwansonEmailTest.Notification
         /// </summary>
         private string[] carbonCopyReceiverAddresses;
 
+        /// <summary>
+        /// A linked resource to be added to the email
+        /// </summary>
+        private LinkedResource linkedResource;
+
         #endregion
 
         #region Constructors
@@ -73,7 +78,8 @@ namespace RonSwansonEmailTest.Notification
                                  string subject,
                                  string senderAddress,
                                  string[] receiverAddresses,
-                                 string[] carbonCopyReceiverAddresses)
+                                 string[] carbonCopyReceiverAddresses,
+                                 LinkedResource linkedResource = null)
         {
             this.smtpClient = new SmtpClient(smtpServerName, smtpPort);
             smtpClient.UseDefaultCredentials = false;
@@ -85,6 +91,7 @@ namespace RonSwansonEmailTest.Notification
             this.senderAddress = senderAddress;
             this.receiverAddresses = receiverAddresses;
             this.carbonCopyReceiverAddresses = carbonCopyReceiverAddresses;
+            this.linkedResource = linkedResource;
         }
 
         #endregion
@@ -165,7 +172,20 @@ namespace RonSwansonEmailTest.Notification
                 }
 
                 mail.Subject = this.subject;
-                mail.Body = this.message;
+
+                if (linkedResource != null)
+                {
+                    // Add the linked resource by making the email body html
+                    mail.IsBodyHtml = true;
+                    var view = AlternateView.CreateAlternateViewFromString(this.message, null, "text/html");
+                    view.LinkedResources.Add(linkedResource);
+                    mail.AlternateViews.Add(view);
+                }
+                else
+                {
+                    // No linked reource - standard text message
+                    mail.Body = this.message;
+                }
 
                 this.smtpClient.Send(mail);
             }

@@ -66,8 +66,17 @@ namespace RonSwansonEmailTest
         [Option(
             "message",
             DefaultValue = null,
-            HelpText = "Gets or sets the path to the file containing the email addresses of the carbon-copy receivers.")]
+            HelpText = "An additional message to add to the email body.")]
         public string Message { get; set; }
+
+        /// <summary>
+        /// Gets or sets the path to an image file that will be added to the email body.
+        /// </summary>
+        [Option(
+            "imageFilePath",
+            DefaultValue = null,
+            HelpText = "Gets or sets the path to an image file that will be added to the email body.")]
+        public string imageFilePath { get; set; }
 
         #endregion
 
