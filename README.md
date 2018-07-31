@@ -3,7 +3,8 @@ Sends an email with a random quote from Ron Swanson, a character on the show "Pa
   
 This executable uses the following command-line arguments:  
   **--ReceiversFilePath** : The path to a text file containing the email addresses of the recipients (REQUIRED).  
-  **--CCReceiversFilePath** : The path to a text file containing the email addresses of the carbon-copy recipients (REQUIRED).  
+  **--CCReceiversFilePath** : The path to a text file containing the email addresses of the carbon-copy recipients (REQUIRED).
+  **--ImageFilePath** : The path to an image file to embed in the email body.
   **--Message** : An additional message to add to the end of the email.  
     
 **Note:** Running this requires two text files to exist, one for each kind of recipient. Email addresses in these text files must be comma-separated.
